@@ -1,0 +1,277 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage{fix-cm}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Eric P. Stavarache}}
+
+\ \ Bucharest, Romania 061906
+\\
++40 770 770 753\ \ \textbullet
+\ \ ericptst@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{ETH Zurich}}
+		{\textbf{Zurich, Switzerland}}
+	\\
+	\headerrow
+		{\emph{Faculty of Computer Science, Ms.C. Computer Science}}
+		{\emph{Expected 2020}}
+
+	\item
+	\headerrow
+		{\textbf{University of Bucharest}}
+		{\textbf{Bucharest, Romania}}
+	\\
+	\headerrow
+		{\emph{Faculty of Mathematics and Informatics, B.S. Computer Science}}
+		{\emph{June 2018}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience - Work}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Google}}
+		{\textbf{Mountain View, CA, US}}
+	\\
+	\headerrow
+		{\emph{Software Engineer Intern}}
+		{\emph{June 2018 - September 2018}}
+	\begin{itemize*}
+		\item Working on a Java bytecode optimizer for Android.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Bloomberg}}
+		{\textbf{London, UK}}
+	\\
+	\headerrow
+		{\emph{Software Engineer Intern}}
+		{\emph{July 2017 - September 2017}}
+	\begin{itemize*}
+		\item Built a Domain Specific Language in Python for integration testing.
+		\item Worked on high-performance data storages in C++ with Redis for distributed storage.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Google}}
+		{\textbf{New York, NY, US}}
+	\\
+	\headerrow
+		{\emph{Software Engineer Intern}}
+		{\emph{February 2017 - May 2017}}
+	\begin{itemize*}
+		\item Worked on a logging system for search, for monitoring systems' health.
+		\item Implemented a full stack application with C++, Go and TypeScript with Preact.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{BitDefender}}
+		{\textbf{Bucharest, Romania}}
+	\\
+	\headerrow
+		{\emph{Software Developer}}
+		{\emph{April 2016 -- May 2018}}
+	\begin{itemize*}
+		\item Working on a smart security device which filters the entire network's traffic, built in C++ using the linux network stack.
+		\item Wrote a framework for automatted testing on virtual machines using qemu and libvirt.
+		\item Optimized performance to achieve a million packets per second throughput.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Runtime Verification, Inc.}}
+		{\textbf{Chicago, IL}}
+	\\
+	\headerrow
+		{\emph{Software Developer Contractor}}
+		{\emph{Oct 2015 - June 2016}}
+	\begin{itemize*}
+		\item Worked with Clang's thread sanitizer in order to instrument memory accesses.
+	\end{itemize*}
+
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience - Volunteering}
+
+\begin{itemize}
+
+	\item Held an advanced algorithms class for outstanding High School students.
+
+	\item
+		{\textbf{Member of the scientific committees of various algorithmic contests}}
+
+	\headerrow
+		{Central European Olympiad in Informatics}
+		{Ministry of Education}
+
+	\headerrow
+		{Romanian IOI selection camp}
+		{Ministry of Education}
+
+	\headerrow
+		{Romanian Olympiad in Informatics}
+		{Ministry of Education}
+
+
+	\begin{itemize*}
+		\item Proposed tasks, helped with writing statements \& implementing solutions.
+		\item Generated test data for tasks .
+	\end{itemize*}
+
+    \item Contributed to open source projects.
+
+\end{itemize}
+
+
+\hrule
+\vspace{+0.4em}
+\begin{flushleft}
+\headerrow
+	{\textbf{\large{Experience - Personal Projects}}}
+	{\textbf{\href{https://github.com/ericpts}{Hosted on Github}}}
+
+\end{flushleft}
+	\begin{itemize*}
+        \item Built an interpretor for a Scheme-like language in Java.
+		\item Implemented multiple Computer Vision projects such as object detection with ML, texture extraction or content aware image resizing.
+	\end{itemize*}
+
+
+
+\hrule
+
+\subsection*{Honors \& Awards}
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	{\textbf{Competitive Programming}}
+
+	\begin{itemize*}
+
+		\item
+		\headerrow
+			{Gold medal, International Zhautykov Olympiad}
+			{2014}
+
+		\item
+		\headerrow
+			{12th place out of 50 at the Google Hash Code Finals in Paris}
+			{2016}
+			\item[]
+			{The tasks consisted of finding the best heuristic for a real life problem, such as controlling drones \\ or directing satellites to spin around the earth and take pictures of various locations.}
+
+		\item
+		\headerrow
+			{14th place out of 88 international teams at the ACM SEERC}
+			{2017}
+
+		\item
+		\headerrow
+			{Romanian Informatics Camp for IOI selection}
+			{2013 \& 2015}
+
+		\item
+		\headerrow
+			{Gold medal, Romanian Olympiad in Informatics}
+			{2013}
+
+		\item
+		\headerrow
+			{Silver medal, Romanian Olympiad in Informatics}
+			{2015}
+
+
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item
+	{\textbf{Languages}}
+
+	\begin{itemize*}
+        \item {Advanced: C++, Python, Bash}
+        \item {Intermediate: Go, JavaScript/TypeScript, Rust, Java, Scheme}
+	\end{itemize*}
+
+	\item
+	{\textbf{Theoretical Computer Science}}
+
+	Algorthims, Data Structures, Cryptography, Computer Vision, Artificial Intelligence, Automata theory
+\end{description*}
+\end{indentsection}
+
+\end{document}
