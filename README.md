@@ -11,5 +11,4 @@ entries when applying for a certain opportunity.
 
 # Preview
 
-![Page 0](resume-0.png)
-![Page 1](resume-1.png)
+![Page 0](resume.png)
