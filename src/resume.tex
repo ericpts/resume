@@ -47,7 +47,7 @@
 \begin{center}
 {\LARGE \textbf{Eric P. Stavarache}}
 
-\ \ Bucharest, Romania 061906
+\ \ Zurich, Switzerland
 \\
 +40 770 770 753\ \ \textbullet
 \ \ ericptst@gmail.com
@@ -83,10 +83,172 @@
 
 \hrule
 \vspace{-1em}
+\subsection*{Experience - Research}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{ETH}}
+		{\textbf{Zurich, CH}}
+	\\
+	\headerrow
+		{\emph{Semester Project}}
+		{\emph{February 2019 - June 2019}}
+	\begin{itemize*}
+        \item Research in Machine Learning, in the area of generative models,
+            with the group of Angelika Steger.
+        \item Looked at the disentanglement of Variational Auto Encoders (VAE)
+            latent representation via multi-model systems.  The goal was for
+            each model to learn to represent a single type of object, thanks to
+            the KL-divergence loss term and to an incremental training process of the
+            system.
+
+            The system's goal was to recreate the input picture.
+            Each model of the system would output a picture (what it thinks the
+            reconstruction is), as well as a confidence mask (how sure it is
+            that a given pixel it outputted is correct).
+            The combined output of the system would then be a weighted
+            combination of the individual models' output.
+
+            The incremental training consisted of traning the first model only
+            on the digit 1, and then the first two models on digits 1 and 2, and
+            so on.
+            The KL-divergence term in the VAE loss penalizes ``remembering""
+            information, so the goal was that the optimal state would be for
+            each model to remember a single digit, and to split the
+            information evenly.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{ETH}}
+		{\textbf{Zurich, CH}}
+	\\
+	\headerrow
+		{\emph{Semester Research Project}}
+		{\emph{February 2019 - June 2019}}
+	\begin{itemize*}
+        \item Research in Machine Learning, in the area of natural language
+            understanding, for a project under Elliott Ash.
+        \item Looked into the connection between the semantic content of a legal
+            document (i.e., the text it contains), and the network connections
+            of a legal document (what other documents it references, and is
+            referenced by).
+
+            The ultimate goal was to predict possible links in the reference
+            graph for a new, in-progress document, for which we would know the
+            content, but which wouldn't have any references yet (because the
+            lawyer writing it did not yet know them).
+
+            We wanted to achieve this by embedding the training documents
+            semantic-wise with word2vec, and graph-wise using node2vec, and then
+            to find links either by projecting from the word2vec space into the
+            node2vec space and then looking at nearest neighbours, or by
+            training a link-prediction classifier.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{ETH}}
+		{\textbf{Zurich, CH}}
+	\\
+	\headerrow
+		{\emph{Course Research Project}}
+		{\emph{February 2019 - June 2019}}
+	\begin{itemize*}
+        \item Research in Theoretical Computer Science, in the area of
+            distributed algorithms, for a project under Mohsen Ghaffari.
+        \item Looked into a massively parallel algorithm (i.e., could scale to
+            an arbitrary amount of machines) for computing the edit distance (ED)
+            between two strings.
+
+            The goal was to create a randomized sub-quadratic algorithm for
+            approximating the ED.
+
+            This was done by viewing the ED problem as a shortest path problem
+            on the matrix of the classical dynamic programming approach.
+            We then sample enough edges of this matrix-graph, such that
+            computing the shortest path on the sampled edges gives us a constant
+            approximation to the true distance.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{ETH}}
+		{\textbf{Zurich, CH}}
+	\\
+	\headerrow
+		{\emph{Course Project}}
+		{\emph{February 2019 - June 2019}}
+	\begin{itemize*}
+        \item Research in Software Engineering, in the area of
+            high-performance computing, for a project under Markus Puschel.
+
+        \item Built a high performance program for computing the Baum-Welch
+            algorithm.
+
+            Achieved performance near the theoretical maximum by optimizing the
+            program for modern processor architectures.
+            This involves re-organizing how the computation is done,
+            to permit the usage of SIMD instructions, to achieve
+            instruction-level parallelism, and to optimize memory accesses in
+            accordance with the memory hierarchy of the computer.
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-1em}
 \subsection*{Experience - Work}
 
 \begin{itemize}
 	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Google}}
+		{\textbf{Zurich, CH}}
+	\\
+	\headerrow
+		{\emph{Software Engineer Intern}}
+		{\emph{October 2019 - April 2020}}
+	\begin{itemize*}
+        \item Worked in the assistant team to create a pipeline for generating
+            plausible nicknames for common apps.
+
+        \item Trained diverse ML models (linear regression, decision trees) to
+            score and rank nicknames, using manually created datasets.
+
+            Used statistical learning techniques (such as feature
+            randomizaton and cross validation) to qualitatively asssess
+            models.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Jane Street Capital}}
+		{\textbf{London, UK}}
+	\\
+	\headerrow
+		{\emph{Software Engineer Intern}}
+		{\emph{July 2019 - September 2019}}
+	\begin{itemize*}
+		\item Distributed the computations of certain metrics on the cluster
+            system, in OCaml.
+
+        \item Created an open-source tool to analyze the code outputted by the
+            OCaml compiler, in order to see which patterns of bytecode are most
+            often generated. Available on
+            \href{https://github.com/ericpts/ocaml-instr-freq}{github}.
+
+        \item Found and fixed a register allocation bug in the OCaml compiler,
+            which was causing it to generate inefficient code for deeply nested
+            conditionals.
+
+        \item Built a toy trading bot for the ETC challenge.
+	\end{itemize*}
 
 	\item
 	\headerrow
@@ -111,7 +273,7 @@
 		{\emph{July 2017 - September 2017}}
 	\begin{itemize*}
 		\item Built a Domain Specific Language in Python for integration testing.
-		\item Worked on high-performance data storages in C++ with Redis for distributed storage.
+		\item Worked on high-performance data storage in C++ with Redis for distributed storage.
 	\end{itemize*}
 
 	\item
@@ -126,7 +288,6 @@
 		\item Worked on a logging system for search, for monitoring systems' health.
 		\item Implemented a full stack application with C++, Go and TypeScript with Preact.
 	\end{itemize*}
-
 \end{itemize}
 
 \hrule
