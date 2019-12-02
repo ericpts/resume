@@ -94,16 +94,16 @@
 		{\textbf{Zurich, CH}}
 	\\
 	\headerrow
-		{\emph{Semester Project}}
+		{\emph{Semester Research Project}}
 		{\emph{February 2019 - June 2019}}
 	\begin{itemize*}
         \item Research in Machine Learning, in the area of generative models,
             with the group of Angelika Steger.
-        \item Looked at the disentanglement of Variational Auto Encoders (VAE)
-            latent representation via multi-model systems.  The goal was for
-            each model to learn to represent a single type of object, thanks to
-            the KL-divergence loss term and to an incremental training process of the
-            system.
+        \item Looked into the disentanglement of Variational Auto Encoders (VAE)
+            latent representation via multi-model systems.  We constructed a system
+            where each model to learn to represent a single type of object,
+            thanks to the KL-divergence loss term and to an incremental training
+            process.
 
             The system's goal was to recreate the input picture.
             Each model of the system would output a picture (what it thinks the
@@ -112,10 +112,10 @@
             The combined output of the system would then be a weighted
             combination of the individual models' output.
 
-            The incremental training consisted of traning the first model only
+            The incremental training consisted of training the first model only
             on the digit 1, and then the first two models on digits 1 and 2, and
             so on.
-            The KL-divergence term in the VAE loss penalizes ``remembering""
+            The KL-divergence term in the VAE loss penalizes ``remembering''
             information, so the goal was that the optimal state would be for
             each model to remember a single digit, and to split the
             information evenly.
@@ -127,7 +127,7 @@
 		{\textbf{Zurich, CH}}
 	\\
 	\headerrow
-		{\emph{Semester Research Project}}
+		{\emph{Course Research Project}}
 		{\emph{February 2019 - June 2019}}
 	\begin{itemize*}
         \item Research in Machine Learning, in the area of natural language
@@ -137,16 +137,16 @@
             of a legal document (what other documents it references, and is
             referenced by).
 
-            The ultimate goal was to predict possible links in the reference
-            graph for a new, in-progress document, for which we would know the
-            content, but which wouldn't have any references yet (because the
-            lawyer writing it did not yet know them).
+            We tested the hypothesis that it should be possible to predict links
+            in the reference graph for a new, in-progress document, for which we
+            would know the content, but which wouldn't have any references yet
+            (as the lawyer wants to discover what to reference).
 
-            We wanted to achieve this by embedding the training documents
-            semantic-wise with word2vec, and graph-wise using node2vec, and then
-            to find links either by projecting from the word2vec space into the
-            node2vec space and then looking at nearest neighbours, or by
-            training a link-prediction classifier.
+            We achieved this by embedding the training documents semantic-wise
+            with word2vec, and graph-wise using node2vec, and then to find links
+            either by projecting from the word2vec space into the node2vec space
+            and then looking at nearest neighbours, or by training a
+            link-prediction classifier.
 	\end{itemize*}
 
 	\item
@@ -164,14 +164,14 @@
             an arbitrary amount of machines) for computing the edit distance (ED)
             between two strings.
 
-            The goal was to create a randomized sub-quadratic algorithm for
-            approximating the ED.
+            We designed a randomized sub-quadratic algorithm for approximating
+            the ED.
 
             This was done by viewing the ED problem as a shortest path problem
             on the matrix of the classical dynamic programming approach.
             We then sample enough edges of this matrix-graph, such that
             computing the shortest path on the sampled edges gives us a constant
-            approximation to the true distance.
+            approximation of the real distance.
 	\end{itemize*}
 
 	\item
@@ -293,20 +293,27 @@
 \hrule
 \vspace{-1em}
 
-\subsection*{Experience - Volunteering \& \href{https://github.com/ericpts}{Projects}}
+\subsection*{Experience - Volunteering}
 
 \vspace{-0.4em}
 
 \begin{itemize*}
 
-	\item Held an advanced algorithms class for outstanding High School students.
+	\item
+    \headerrow
+        {Held an advanced algorithms class for outstanding High School students.}
+        {2016}
 
 	\item
-		{Member of the scientific committees of various algorithmic contests}
+    \headerrow
+        {Scientific committee member in national and
+        international algorithmic contests}
+        {2016-2018}
 
-	\headerrow
-		{\textbf{Central European Olympiad, Romanian Olympiad}}
-		{Ministry of Education}
+    \item
+    \headerrow
+        {\textbf{Central European Olympiad, Romanian Olympiad}}
+        {2016}
 
 \vspace{-0.6em}
 
@@ -314,10 +321,6 @@
 		\item Proposed tasks, helped with writing statements \& implementing solutions.
 	\end{itemize*}
 
-\vspace{-0.6em}
-
-    \item Built an interpretor for a Scheme-like language in Java.
-    \item Implemented multiple Computer Vision projects such as object detection with ML, texture extraction or content aware image resizing.
 \end{itemize*}
 
 
@@ -329,6 +332,11 @@
 \subsection*{Experience - Competitive Programming}
 \begin{itemize}
 	\parskip=0.1em
+		\item
+		\headerrow
+			{11th place out of 89 international teams at the ACM SWERC}
+			{2018}
+
 		\item
 		\headerrow
 			{14th place out of 88 international teams at the ACM SEERC}
@@ -364,13 +372,15 @@
 
 	\begin{itemize*}
         \item {Advanced: C++, Python, Bash}
-        \item {Intermediate: Go, JavaScript/TypeScript, Rust, Java, Scheme}
+        \item {Intermediate: OCaml, Go, JavaScript/TypeScript, Rust, Java}
 	\end{itemize*}
 
 	\item
-	{\textbf{Theoretical Computer Science}}
+	{\textbf{Computer Science}}
 
-	Algorthims, Data Structures, Cryptography, Computer Vision, Artificial Intelligence, Automata theory
+    Algorthims, Data Structures, Cryptography, Computer Vision, Artificial
+    Intelligence, Automata theory, Machine Learning, Statistics \& Pattern
+    Recognition
 \end{description*}
 \end{indentsection}
 
